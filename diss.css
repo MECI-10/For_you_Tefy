@@ -1,0 +1,476 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bodyyy {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+}
+
+.stars {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  background: white;
+  box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
+    22vw 22vh 1px white, 28vw 12vh 2px white, 32vw 32vh 1px white,
+    38vw 18vh 2px white, 42vw 35vh 1px white, 48vw 25vh 2px white,
+    53vw 42vh 1px white, 58vw 15vh 2px white, 63vw 38vh 1px white,
+    68vw 28vh 2px white, 73vw 45vh 1px white, 78vw 32vh 2px white,
+    83vw 48vh 1px white, 88vw 20vh 2px white, 93vw 52vh 1px white,
+    98vw 35vh 2px white, 5vw 60vh 1px white, 12vw 65vh 2px white,
+    18vw 72vh 1px white, 25vw 78vh 2px white, 30vw 85vh 1px white,
+    35vw 68vh 2px white, 40vw 82vh 1px white, 45vw 92vh 2px white,
+    50vw 75vh 1px white, 55vw 88vh 2px white, 60vw 95vh 1px white,
+    65vw 72vh 2px white, 70vw 85vh 1px white, 75vw 78vh 2px white,
+    80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
+    95vw 75vh 2px white;
+  animation: twinkle 8s infinite linear;
+}
+
+.shooting-star {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, white, transparent);
+  animation: shoot 3s infinite ease-in;
+}
+
+.shooting-star:nth-child(1) {
+  top: 20%;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.shooting-star:nth-child(2) {
+  top: 35%;
+  left: -100px;
+  animation-delay: 1s;
+}
+
+.shooting-star:nth-child(3) {
+  top: 50%;
+  left: -100px;
+  animation-delay: 2s;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes shoot {
+  0% {
+    transform: translateX(0) translateY(0) rotate(25deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120vw) translateY(50vh) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+.stars::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  box-shadow: 8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
+    33vw 15vh 1px white, 41vw 28vh 2px white, 49vw 35vh 1px white,
+    57vw 22vh 2px white, 65vw 42vh 1px white, 73vw 28vh 2px white,
+    81vw 48vh 1px white, 89vw 32vh 2px white, 97vw 45vh 1px white,
+    3vw 68vh 2px white, 11vw 75vh 1px white, 19vw 82vh 2px white,
+    27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
+    51vw 92vh 2px white, 59vw 78vh 1px white;
+  animation: twinkle 6s infinite linear reverse;
+}
+.titu {
+  font-size: 30px;
+  font-weight: bold;
+  color: #e6f0ff; 
+  text-align: center;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+
+  
+  text-shadow: 
+    0 0 3px #ffffff,   
+    0 0 6px #ca1fb6,   
+    0 0 12px #000000;
+}
+
+.titu2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e6f0ff; 
+  text-align: center;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+
+  
+  text-shadow: 
+    0 0 3px #ff6df5,   
+    0 0 6px #000000,   
+    0 0 12px #ff00ee;
+}
+.titu3 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #e6f0ff; 
+  text-align: center;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+
+  
+  text-shadow: 
+    0 0 3px #ffffff,   
+    0 0 6px #5f1266,   
+    0 0 12px #691169;
+}
+
+.cardd {
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.cardd::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg,#03a9f4,#006eff);
+  border-radius: 20px;
+}
+
+.cardd::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg,#03a9f4,#160e0e);
+  filter: blur(30px);
+}
+
+.cardd b {
+  position: absolute;
+  inset: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.cardd img {
+  position: absolute;
+  z-index: 3;
+  scale: 0.8;
+  opacity: 0.25;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.cardd:hover img {
+  scale: 0.5;
+  opacity: 0.9;
+  transform: translateY(-70px);
+  border-radius: 20px;
+}
+
+.cardd .content1 {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.cardd:hover .content1 {
+  transform: scale(1);
+  bottom: 25px;
+}
+
+.content1 .title1 {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1em;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.content1 .title1 span {
+  font-weight: 300;
+  font-size: 0.70em;
+}
+
+.content1 .scii {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.scii li {
+  list-style: none;
+}
+
+.scii li .fa-brands {
+  width: 14px;
+}
+
+.scii li .fa-facebook {
+  width: 10px;
+}
+
+.scii li a {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.2);
+  fill: currentColor;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.scii li a:hover {
+  fill: currentColor;
+  color: rgba(255, 255, 255, 1);
+}
+
+.fonddddd{
+    background: #a3005c;
+    background: -webkit-linear-gradient(to bottom, #181818, #ca04b3);
+    background: linear-gradient(to bottom, #181818, #cf00b0);
+}
+.pp{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    color: #e6f0ff; 
+    text-align: center;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+
+  
+  text-shadow: 
+    0 0 3px #000000,   
+    0 0 6px #dadd2a,   
+    0 0 12px #000000;
+
+}
+
+.ppp{
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    color: #e6f0ff; 
+    text-align: center;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+
+  
+  text-shadow: 
+    0 0 3px #000000,   
+    0 0 6px #6e7425,   
+    0 0 12px #000000;
+
+}
+
+.checkbox-wrapper {
+  --checkbox-size: 25px;
+  --checkbox-color: #ffffff;
+  --checkbox-shadow: rgba(255, 255, 255, 0.3);
+  --checkbox-border: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-wrapper .checkmark {
+  position: relative;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  border: 2px solid var(--checkbox-border);
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px var(--checkbox-shadow);
+  overflow: hidden;
+}
+
+.checkbox-wrapper .checkmark::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--checkbox-color), #00ffcc);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: scale(0) rotate(-45deg);
+}
+
+.checkbox-wrapper input:checked ~ .checkmark::before {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+.checkbox-wrapper .checkmark svg {
+  width: 0;
+  height: 0;
+  color: #1a1a1a;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+}
+
+.checkbox-wrapper input:checked ~ .checkmark svg {
+  width: 18px;
+  height: 18px;
+  transform: rotate(360deg);
+}
+
+.checkbox-wrapper:hover .checkmark {
+  border-color: var(--checkbox-color);
+  transform: scale(1.1);
+  box-shadow:
+    0 0 20px var(--checkbox-shadow),
+    0 0 40px var(--checkbox-shadow),
+    inset 0 0 10px var(--checkbox-shadow);
+}
+
+.checkbox-wrapper input:checked ~ .checkmark {
+  animation: pulse 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 20px var(--checkbox-shadow);
+  }
+  50% {
+    transform: scale(0.9);
+    box-shadow:
+      0 0 30px var(--checkbox-shadow),
+      0 0 50px var(--checkbox-shadow);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px var(--checkbox-shadow);
+  }
+}
+
+.checkbox-wrapper .label {
+  margin-left: 15px;
+  font-family: "Segoe UI", sans-serif;
+  color: var(--checkbox-color);
+  font-size: 18px;
+  text-shadow: 0 0 10px var(--checkbox-shadow);
+  opacity: 0.9;
+  transition: all 0.3s;
+}
+
+.checkbox-wrapper:hover .label {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+.checkbox-wrapper::after,
+.checkbox-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--checkbox-color);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.checkbox-wrapper::before {
+  left: -10px;
+  top: 50%;
+}
+
+.checkbox-wrapper::after {
+  right: -10px;
+  top: 50%;
+}
+
+.checkbox-wrapper:hover::before {
+  opacity: 1;
+  transform: translateX(-10px);
+  box-shadow: 0 0 10px var(--checkbox-color);
+}
+
+.checkbox-wrapper:hover::after {
+  opacity: 1;
+  transform: translateX(10px);
+  box-shadow: 0 0 10px var(--checkbox-color);
+}
+
+.fondooo{
+    background: #1e130c; 
+background: -webkit-linear-gradient(to bottom, #93789a, #1e130c);
+background: linear-gradient(to bottom, #9a7898, #1e130c); 
+
+}
+
+
+.caja-audio {
+    width: 240px;
+    max-width: 100%;
+    height: 40px;
+    margin: 10px auto 0 auto;
+    border-radius: 50px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.85); /* Sombra negra intacta */
+    overflow: hidden; /* Recorta las esquinas para que coincidan con el borde redondo */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.caja-audio:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.95);
+}
+
+.caja-audio audio {
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: invert(90%) hue-rotate(245deg) saturate(1.5); /* Solo cambia el color del reproductor */
+}
